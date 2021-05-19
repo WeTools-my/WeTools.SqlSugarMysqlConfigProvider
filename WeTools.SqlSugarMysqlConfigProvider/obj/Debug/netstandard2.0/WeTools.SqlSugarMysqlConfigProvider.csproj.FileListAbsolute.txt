@@ -1,0 +1,9 @@
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\bin\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.deps.json
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\bin\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.dll
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\bin\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.pdb
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\obj\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.csprojAssemblyReference.cache
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\obj\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.AssemblyInfoInputs.cache
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\obj\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.AssemblyInfo.cs
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\obj\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.csproj.CoreCompileInputs.cache
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\obj\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.dll
+E:\Git\Github\WeTools.SqlSugarMysqlConfigProvider\WeTools.SqlSugarMysqlConfigProvider\obj\Debug\netstandard2.0\WeTools.SqlSugarMysqlConfigProvider.pdb
