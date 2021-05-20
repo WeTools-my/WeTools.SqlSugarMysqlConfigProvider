@@ -26,5 +26,10 @@
         /// 配置源 0 json 文件，1 mysql数据库
         /// </summary>
         public int ConfigSource { get; set; } = 1;
+
+        /// <summary>
+        /// 初始化表
+        /// </summary>
+        public bool InitTable { get; set; } = true;
     }
 }

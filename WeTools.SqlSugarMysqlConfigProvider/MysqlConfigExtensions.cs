@@ -8,7 +8,7 @@ namespace WeTools.SqlSugarMysqlConfigProvider
         /// <summary>
         /// 注册mysql数据配置源
         /// 需要appsettings配置WeTools节点
-        /// 包含ConnectionString（string类型）、ReloadOnChange（bool类型）、ReloadInterval(int类型)、ConfigSource（int类型）节点
+        /// 包含ConnectionString（string类型）、ReloadOnChange（bool类型）、ReloadInterval(int类型)、InitTable（bool类型）节点
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -23,7 +23,7 @@ namespace WeTools.SqlSugarMysqlConfigProvider
         /// <summary>
         /// 注册mysql数据配置源
         /// 需要appsettings配置节点
-        /// 包含ConnectionString（string类型）、ReloadOnChange（bool类型）、ReloadInterval(int类型)、ConfigSource（int类型）节点
+        /// 包含ConnectionString（string类型）、ReloadOnChange（bool类型）、ReloadInterval(int类型)、InitTable（bool类型）节点
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -31,5 +31,6 @@ namespace WeTools.SqlSugarMysqlConfigProvider
         {
             return builder.Add(new SqlSugarMysqlConfigurationSource(option));
         }
+
     }
 }

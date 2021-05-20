@@ -2514,7 +2514,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "WeTools.SqlSugarMysqlConfigProvider/1.0.0": {
+      "WeTools.SqlSugarMysqlConfigProvider/1.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "5.0.0",
@@ -8254,15 +8254,15 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "WeTools.SqlSugarMysqlConfigProvider/1.0.0": {
-      "sha512": "pc4N8BbADxajUE+tuuVTb38nHzE0OtxvleC+OuNewQ/67QkA3VmcRDh0ElBcbxOSJE8VBXSLUppYcv4GoDJ1Og==",
+    "WeTools.SqlSugarMysqlConfigProvider/1.0.1": {
+      "sha512": "mr8or7TS5ct0Ap5OZRiAB/mF/gPcd4qc+lHdrADSD+xGs652Id9FFm4b90YXl7RhDDSgjaGe7YDQgbP/CfhHvA==",
       "type": "package",
-      "path": "wetools.sqlsugarmysqlconfigprovider/1.0.0",
+      "path": "wetools.sqlsugarmysqlconfigprovider/1.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/WeTools.SqlSugarMysqlConfigProvider.dll",
-        "wetools.sqlsugarmysqlconfigprovider.1.0.0.nupkg.sha512",
+        "wetools.sqlsugarmysqlconfigprovider.1.0.1.nupkg.sha512",
         "wetools.sqlsugarmysqlconfigprovider.nuspec"
       ]
     }
@@ -8270,7 +8270,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.Extensions.Hosting >= 5.0.0",
-      "WeTools.SqlSugarMysqlConfigProvider >= 1.0.0"
+      "WeTools.SqlSugarMysqlConfigProvider >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -8328,7 +8328,7 @@
           },
           "WeTools.SqlSugarMysqlConfigProvider": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.0.1, )"
           }
         },
         "imports": [

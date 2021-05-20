@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "WeTools.SqlSugarMysqlConfigProvider/1.0.0": {
+      "WeTools.SqlSugarMysqlConfigProvider/1.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "5.0.0",
           "Microsoft.Extensions.Configuration.Binder": "5.0.0",
@@ -1291,7 +1291,7 @@
     }
   },
   "libraries": {
-    "WeTools.SqlSugarMysqlConfigProvider/1.0.0": {
+    "WeTools.SqlSugarMysqlConfigProvider/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

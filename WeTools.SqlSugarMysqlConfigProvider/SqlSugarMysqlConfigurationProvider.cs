@@ -21,11 +21,15 @@ namespace WeTools.SqlSugarMysqlConfigProvider
         {
             _option = option;
 
-            _appConfig = new ServerAppConfigProvider(new DbOption { ConnectionString = option.ConnectionString });
+            _appConfig = new ServerAppConfigProvider(new DbOption { ConnectionString = option.ConnectionString },_option.InitTable?SqlSugar.InitKeyType.Attribute:SqlSugar.InitKeyType.SystemTable);
+
+
+            if (_option.InitTable)
+            {
+                _appConfig.InitTable();
+            }
 
             TimeSpan interval = _option.ReloadInterval == 0 ? TimeSpan.FromSeconds(3) : TimeSpan.FromSeconds(_option.ReloadInterval);
-
-            Load();
 
             if (_option.ReloadOnChange)
             {
@@ -34,6 +38,7 @@ namespace WeTools.SqlSugarMysqlConfigProvider
                     while (!_isDisposed)
                     {
                         Thread.Sleep(interval);
+
                         Load();
                     }
                 });
@@ -87,7 +92,7 @@ namespace WeTools.SqlSugarMysqlConfigProvider
                 data.ForEach(c => {
                     var name = c.Name;
                     var value = c.Value;
-
+                    Console.WriteLine("name:"+ name);
                     if (string.IsNullOrWhiteSpace(value))
                     {
                         Data[name] = value;

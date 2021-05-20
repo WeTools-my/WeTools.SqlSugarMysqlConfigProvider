@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using WeTools.SqlSugarMysqlConfigProvider.Model;
@@ -8,8 +9,8 @@ namespace WeTools.SqlSugarMysqlConfigProvider
 {
     public class ServerAppConfigProvider : DbContext<ServerAppConfigModel>, IServerAppConfigProvider
     {
-        public ServerAppConfigProvider(IOptionsMonitor<DbOption> db) : base(db) { }
-        public ServerAppConfigProvider(DbOption db) : base(db) { }
+        public ServerAppConfigProvider(IOptionsMonitor<DbOption> db, InitKeyType keyType = InitKeyType.SystemTable) : base(db,keyType) { }
+        public ServerAppConfigProvider(DbOption db, InitKeyType keyType = InitKeyType.SystemTable) : base(db, keyType) { }
 
         public List<ServerAppConfigModel> GetConfigs()
         {
@@ -36,6 +37,11 @@ namespace WeTools.SqlSugarMysqlConfigProvider
         List<ServerAppConfigModel> IServerAppConfigProvider.GetConfigsByAppName(string appName)
         {
             throw new NotImplementedException();
+        }
+
+        public void InitTable()
+        {
+            db.CodeFirst.SetStringDefaultLength(200).InitTables(typeof(ServerAppConfigModel));
         }
     }
 }

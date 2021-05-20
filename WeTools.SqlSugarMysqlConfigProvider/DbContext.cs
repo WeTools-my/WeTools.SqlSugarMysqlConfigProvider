@@ -7,16 +7,16 @@ namespace WeTools.SqlSugarMysqlConfigProvider
 {
     public class DbContext<T> where T : class, new()
     {
-        public DbContext(DbOption option)
+        public DbContext(DbOption option, InitKeyType keyType=InitKeyType.SystemTable)
         {
 
             db = new SqlSugarClient(new ConnectionConfig()
             {
                 ConnectionString = option.ConnectionString,
                 DbType = DbType.MySql,
-                InitKeyType = InitKeyType.SystemTable,//从特性读取主键和自增列信息
+                InitKeyType = keyType,//从特性读取主键和自增列信息
                 IsAutoCloseConnection = true,//开启自动释放模式和EF原理一样我就不多解释了
-                IsShardSameThread = true//设为true相同线程是同一个SqlConnection
+                //IsShardSameThread = true//设为true相同线程是同一个SqlConnection
             });
             //调式代码 用来打印SQL 
             //db.Aop.OnLogExecuting = (sql, pars) =>
@@ -28,16 +28,16 @@ namespace WeTools.SqlSugarMysqlConfigProvider
 
         }
 
-        public DbContext(IOptionsMonitor<DbOption> option)
+        public DbContext(IOptionsMonitor<DbOption> option, InitKeyType keyType = InitKeyType.SystemTable)
         {
 
             db = new SqlSugarClient(new ConnectionConfig()
             {
                 ConnectionString = option.CurrentValue.ConnectionString,
                 DbType = DbType.MySql,
-                InitKeyType = InitKeyType.SystemTable,//从特性读取主键和自增列信息
+                InitKeyType = keyType,//从特性读取主键和自增列信息
                 IsAutoCloseConnection = true,//开启自动释放模式和EF原理一样我就不多解释了
-                IsShardSameThread = true//设为true相同线程是同一个SqlConnection
+                //IsShardSameThread = true//设为true相同线程是同一个SqlConnection
             });
 
             //先不使用，稍后修改

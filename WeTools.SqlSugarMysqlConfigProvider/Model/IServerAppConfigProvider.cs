@@ -19,5 +19,10 @@ namespace WeTools.SqlSugarMysqlConfigProvider.Model
         /// </summary>
         /// <returns></returns>
         List<ServerAppConfigModel> GetConfigs();
+
+        /// <summary>
+        /// 初始化表
+        /// </summary>
+        void InitTable();
     }
 }
