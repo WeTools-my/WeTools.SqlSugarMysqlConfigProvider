@@ -1,17 +1,18 @@
 # WeTools.SqlSugarMysqlConfigProvider
+æ”¯æŒå¤šç§æ•°æ®åº“ç‰ˆæœ¬ https://github.com/WeTools-my/WeTools.SqlSugarDBConfigProvider
 
-## ½éÉÜ
-NameÁĞµÄÖµ×ñÑ­.NETÖĞÅäÖÃµÄ¡°¶à²ã¼¶Êı¾İµÄ±âÆ½»¯¡±
-ÈçÏÂ¶¼ÊÇºÏ·¨µÄNameÁĞµÄÖµ£º
+## ä»‹ç»
+Nameåˆ—çš„å€¼éµå¾ª.NETä¸­é…ç½®çš„â€œå¤šå±‚çº§æ•°æ®çš„æ‰å¹³åŒ–â€
+å¦‚ä¸‹éƒ½æ˜¯åˆæ³•çš„Nameåˆ—çš„å€¼ï¼š
 ```
 Api:Jwt:Audience
 Age
 Api:Names:0
 Api:Names:1
 ```
-ValueÁĞµÄÖµÓÃÀ´±£´æNameÀà¶ÔÓ¦µÄÅäÖÃµÄÖµ¡£
-ValueµÄÖµ¿ÉÒÔÊÇÆÕÍ¨µÄÖµ£¬Ò²¿ÉÒÔÊ¹ÓÃjsonÊı×é£¬Ò²¿ÉÒÔÊÇjson¶ÔÏó¡£
-±ÈÈçÏÂÃæ¶¼ÊÇºÏ·¨µÄValueÖµ£º
+Valueåˆ—çš„å€¼ç”¨æ¥ä¿å­˜Nameç±»å¯¹åº”çš„é…ç½®çš„å€¼ã€‚
+Valueçš„å€¼å¯ä»¥æ˜¯æ™®é€šçš„å€¼ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨jsonæ•°ç»„ï¼Œä¹Ÿå¯ä»¥æ˜¯jsonå¯¹è±¡ã€‚
+æ¯”å¦‚ä¸‹é¢éƒ½æ˜¯åˆæ³•çš„Valueå€¼ï¼š
 ```
 ["a","d"]
 {"Secret": "afd3","Issuer": "wetools","Ids":[3,5,8]} 
@@ -19,28 +20,28 @@ ValueµÄÖµ¿ÉÒÔÊÇÆÕÍ¨µÄÖµ£¬Ò²¿ÉÒÔÊ¹ÓÃjsonÊı×é£¬Ò²¿ÉÒÔÊÇjson¶ÔÏó¡£
 ccc
 ```
 
-## Ê¹ÓÃ
-1.ÔÚvs ÖĞÌí¼Ó°ü
+## ä½¿ç”¨
+1.åœ¨vs ä¸­æ·»åŠ åŒ…
 WeTools.SqlSugarMysqlConfigProvider
-»òÕßÊ¹ÓÃpm
+æˆ–è€…ä½¿ç”¨pm
 ```
  Install-Package WeTools.SqlSugarMysqlConfigProvider -Version 1.0.1
  ```
-2.À©Õ¹·½·¨
+2.æ‰©å±•æ–¹æ³•
 ```
-AddSqlSugarMysqlConfiguration(this IConfigurationBuilder builder)  Ê¹ÓÃ´Ë·½·¨ĞèÒªÔÚÅäÖÃÎÄ¼şĞÂÔö¹Ì¶¨½Úµã WeTools £¬³ÌĞò»á×Ô¶¯½âÎö×Ó½Úµã¡£
-AddSqlSugarMysqlConfiguration(this IConfigurationBuilder builder, ConfigProviderOption option) Ê¹ÓÃ´Ë·½·¨ĞèÒª×Ô¼º´´½¨Options¶ÔÏó£¬½«ÅäÖÃ´«Èë½øÈ¥¡£
+AddSqlSugarMysqlConfiguration(this IConfigurationBuilder builder)  ä½¿ç”¨æ­¤æ–¹æ³•éœ€è¦åœ¨é…ç½®æ–‡ä»¶æ–°å¢å›ºå®šèŠ‚ç‚¹ WeTools ï¼Œç¨‹åºä¼šè‡ªåŠ¨è§£æå­èŠ‚ç‚¹ã€‚
+AddSqlSugarMysqlConfiguration(this IConfigurationBuilder builder, ConfigProviderOption option) ä½¿ç”¨æ­¤æ–¹æ³•éœ€è¦è‡ªå·±åˆ›å»ºOptionså¯¹è±¡ï¼Œå°†é…ç½®ä¼ å…¥è¿›å»ã€‚
 ```
-3.ÅäÖÃ½Úµã
+3.é…ç½®èŠ‚ç‚¹
 ```
 "WeTools":
 
 {
-"ConnectionString": "host=localhost;port=3306;user id=root;password=;database=sugar;",//mysql Á¬½Ó×Ö·û´®£¬×ÔĞĞĞŞ¸Ä
-"ReloadOnChange": true, //ÊÇ·ñÖØÔØÅäÖÃ Ä¬ÈÏfalse £¬´Ë½Úµã ¿ÉÒÔ²»ÅäÖÃ
-"ReloadInterval": 3, //ÖØÔØÊ±¼ä¼ä¸ô£¬µ¥Î»Ãë£¬±ØĞë´óÓÚ0£¬Èç¹ûÉèÖÃ0 Ê¹ÓÃÄ¬ÈÏÖµ3Ãë
-"InitTable": true //ÊÇ·ñ³õÊ¼»¯±í£¬´ËÅäÖÃ»á×Ô¶¯Éú³ÉÅäÖÃ±í£¬Ä¬ÈÏtrue,Èç¹û±íÒÑ´æÔÚ£¬²»»á½øĞĞ¸²¸Ç£¬´Ë½Úµã ¿ÉÒÔ²»ÅäÖÃ
+"ConnectionString": "host=localhost;port=3306;user id=root;password=;database=sugar;",//mysql è¿æ¥å­—ç¬¦ä¸²ï¼Œè‡ªè¡Œä¿®æ”¹
+"ReloadOnChange": true, //æ˜¯å¦é‡è½½é…ç½® é»˜è®¤false ï¼Œæ­¤èŠ‚ç‚¹ å¯ä»¥ä¸é…ç½®
+"ReloadInterval": 3, //é‡è½½æ—¶é—´é—´éš”ï¼Œå•ä½ç§’ï¼Œå¿…é¡»å¤§äº0ï¼Œå¦‚æœè®¾ç½®0 ä½¿ç”¨é»˜è®¤å€¼3ç§’
+"InitTable": true //æ˜¯å¦åˆå§‹åŒ–è¡¨ï¼Œæ­¤é…ç½®ä¼šè‡ªåŠ¨ç”Ÿæˆé…ç½®è¡¨ï¼Œé»˜è®¤true,å¦‚æœè¡¨å·²å­˜åœ¨ï¼Œä¸ä¼šè¿›è¡Œè¦†ç›–ï¼Œæ­¤èŠ‚ç‚¹ å¯ä»¥ä¸é…ç½®
 }
 ```
-# ¸ĞĞ»
-´ËÏîÄ¿²Î¿¼×ÔÑîÖĞ¿ÆÀÏÊ¦µÄ Zack.AnyDBConfigProvider(https://github.com/yangzhongke/Zack.AnyDBConfigProvider) 
+# æ„Ÿè°¢
+æ­¤é¡¹ç›®å‚è€ƒè‡ªæ¨ä¸­ç§‘è€å¸ˆçš„ Zack.AnyDBConfigProvider(https://github.com/yangzhongke/Zack.AnyDBConfigProvider) 
